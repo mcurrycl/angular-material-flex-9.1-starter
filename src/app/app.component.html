@@ -1,4 +1,4 @@
-<h1>Angular Material</h1>
+<mat-toolbar>Toolbar</mat-toolbar>
 
 <div style="padding-left: 5px; padding-right: 5px" fxLayout="column" fxLayoutGap="5px">
 	<div fxLayout="row" fxLayoutAlign="space-around center">
@@ -14,7 +14,7 @@
 	</div>
 
 	<div>Buttons - Colours</div>
-	<div  fxLayout="row" fxLayoutAlign="space-around center">
+	<div fxLayout="row" fxLayoutAlign="space-around center">
 		<button mat-button>Basic</button>
 		<button mat-button color="primary">Primary</button>
 		<button mat-button color="accent">Accent</button>
@@ -24,8 +24,8 @@
 	</div>
 
 	<div>Buttons - Styles</div>
-	<div  fxLayout="row" fxLayoutAlign="space-around center">
-    <button mat-button>Basic</button>
+	<div fxLayout="row" fxLayoutAlign="space-around center">
+		<button mat-button>Basic</button>
 		<button mat-raised-button >Raised</button>
 		<button mat-stroked-button >Stroked</button>
 		<button mat-flat-button >Flat</button>
@@ -41,12 +41,23 @@
 		<button mat-raised-button><mat-icon>home</mat-icon>Icon Button</button>
 	</div>
 
+	<div>
+		Button Groups
+		<div>
+			<mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+				<mat-button-toggle value="bold">Bold</mat-button-toggle>
+				<mat-button-toggle value="italic">Italic</mat-button-toggle>
+				<mat-button-toggle value="underline">Underline</mat-button-toggle>
+			</mat-button-toggle-group>
+		</div>
+	</div>
 
 	<mat-list>
 		List
 		<mat-list-item>
 			Item 1
 		</mat-list-item>
+		<mat-divider></mat-divider>
 		<mat-list-item>
 			Item 2
 		</mat-list-item>
@@ -56,8 +67,9 @@
 		</mat-list-item>
 	</mat-list>
 
-	<div fxLayout="row">
-		<mat-checkbox>Checkbox</mat-checkbox>
+	<div fxLayout="row" fxLayoutAlign="space-around center">
+		<mat-checkbox color="primary">Checkbox</mat-checkbox>
+		<mat-slide-toggle color="primary">Slide me!</mat-slide-toggle>
 	</div>
 
 	<mat-radio-group aria-label="Select an option">
@@ -66,5 +78,24 @@
 	</mat-radio-group>
 
 	<mat-slider></mat-slider>
+
+	<mat-form-field>
+		<input matInput>
+		<mat-label>Form Field Input</mat-label>
+	</mat-form-field>
+
+	<mat-chip-list aria-label="Fish selection">
+		<mat-chip>One fish</mat-chip>
+		<mat-chip>Two fish</mat-chip>
+		<mat-chip color="primary" selected>Primary fish</mat-chip>
+		<mat-chip color="accent" selected>Accent fish</mat-chip>
+	</mat-chip-list>
+
+
+
+	<mat-progress-bar mode="determinate" value="10"></mat-progress-bar>
+
+	<mat-spinner></mat-spinner>
+
 
 </div>
